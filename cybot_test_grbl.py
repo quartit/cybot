@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 #import serial,time
+from serial import Serial
 if __name__ == '__main__':
     
     print('Running. Press CTRL-C to exit.')
