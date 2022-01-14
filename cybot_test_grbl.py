@@ -1,14 +1,20 @@
-#!/usr/bin/env python3
-import serial
-import time
-
+#import serial,time
 if __name__ == '__main__':
-    ser = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
-    time.sleep(0.1) #wait for serial to open
-    if arduino.isOpen():
-        print("{} connected!".format(arduino.port))
-    ser.reset_input_buffer()
-    ser.write("x30\n".encode('utf-8'))
-    line = ser.readline().decode('utf-8').rstrip()
-    print(line)
-     
+    
+    print('Running. Press CTRL-C to exit.')
+    with serial.Serial("/dev/ttyACM0", 9600, timeout=1) as arduino:
+        time.sleep(0.1) #wait for serial to open
+        if arduino.isOpen():
+            print("{} connected!".format(arduino.port))
+            try:
+                while True:
+                    cmd=input("Enter command : ")
+                    arduino.write(cmd.encode())
+                    #time.sleep(0.1) #wait for arduino to answer
+                    while arduino.inWaiting()==0: pass
+                    if  arduino.inWaiting()>0: 
+                        answer=arduino.readline()
+                        print(answer)
+                        arduino.flushInput() #remove data after reading
+            except KeyboardInterrupt:
+                print("KeyboardInterrupt has been caught.")
