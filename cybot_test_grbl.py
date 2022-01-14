@@ -14,4 +14,4 @@ if __name__ == '__main__':
         if arduino.isOpen():
             print("{} connected!".format(arduino.port))
             arduino.write("g91\n".encode('utf-8'))
-            arduino.write("x50\n".encode('utf-8'))
+            arduino.write("x50y100\n".encode('utf-8'))
