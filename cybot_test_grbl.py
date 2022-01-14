@@ -13,15 +13,4 @@ if __name__ == '__main__':
         time.sleep(0.1) #wait for serial to open
         if arduino.isOpen():
             print("{} connected!".format(arduino.port))
-            try:
-                while True:
-                    cmd=input("Enter command : ")
-                    arduino.write(cmd.encode())
-                    #time.sleep(0.1) #wait for arduino to answer
-                    while arduino.inWaiting()==0: pass
-                    if  arduino.inWaiting()>0: 
-                        answer=arduino.readline()
-                        print(answer)
-                        arduino.flushInput() #remove data after reading
-            except KeyboardInterrupt:
-                print("KeyboardInterrupt has been caught.")
+            arduino.write("x50\n".encode('utf-8'))
