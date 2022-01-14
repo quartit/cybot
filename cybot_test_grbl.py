@@ -1,6 +1,11 @@
-#!/usr/bin/python3
-#import serial,time
-from serial import Serial
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# lsusb to check device name
+#dmesg | grep "tty" to find port name
+
+import serial,time
+
+
 if __name__ == '__main__':
     
     print('Running. Press CTRL-C to exit.')
