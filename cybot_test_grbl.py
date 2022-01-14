@@ -13,5 +13,5 @@ if __name__ == '__main__':
         time.sleep(0.1) #wait for serial to open
         if arduino.isOpen():
             print("{} connected!".format(arduino.port))
-            arduino.write("g91\n.encode('utf-8'))
+            arduino.write("g91\n".encode('utf-8'))
             arduino.write("x50\n".encode('utf-8'))
