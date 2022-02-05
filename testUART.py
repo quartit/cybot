@@ -13,5 +13,5 @@ if __name__ == '__main__':
         time.sleep(2) #wait for serial to open
         if stm32.isOpen():
             print("{} connected!".format(stm32.port))
-            stm32.write("12345 ".encode('utf-8'))
+            stm32.write("W".encode('utf-8'))
            
