@@ -1,17 +1,20 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# lsusb to check device name
-#dmesg | grep "tty" to find port name
+import time
+import serial
 
-import serial,time
+ser = serial.Serial(
+        port='/dev/ttyAMA0', #Replace ttyS0 with ttyAM0 for Pi1,Pi2,Pi0
+        baudrate = 115200,
+        parity=serial.PARITY_NONE,
+        stopbits=serial.STOPBITS_ONE,
+        bytesize=serial.EIGHTBITS,
+        timeout=1
+)
+counter=0
 
-
-if __name__ == '__main__':
-    
-    print('Running. Press CTRL-C to exit.')
-    with serial.Serial("/dev/ttyAMA0", 115200, timeout=1) as stm32:
-        time.sleep(2) #wait for serial to open
-        if stm32.isOpen():
-            print("{} connected!".format(stm32.port))
-            stm32.write("W".encode('utf-8'))
+while 1:
+        #ser.write("Write counter: %d \n"%(counter))
+        ser.write("W")
+        time.sleep(1)
+        counter += 1
            
