@@ -15,4 +15,5 @@ if __name__ == '__main__':
         if stm32.isOpen():
             print("{} connected!".format(stm32.port))
             stm32.write("HELL".encode('utf-8'))
+            stm32.close()
    
