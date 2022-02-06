@@ -14,10 +14,10 @@ if __name__ == '__main__':
         time.sleep(2) #wait for serial to open
         if stm32.isOpen():
             print("{} connected!".format(stm32.port))
-            stm32.write("W".encode('utf-8'))
+            stm32.write("HELL".encode('utf-8'))
     with serial.Serial("/dev/ttyS0", 115200, timeout=1) as stm322:
         time.sleep(2) #wait for serial to open
         if stm322.isOpen():
             print("{} connected!".format(stm322.port))
-            stm322.write("W".encode('utf-8'))
+            stm322.write("HELL".encode('utf-8'))
 
