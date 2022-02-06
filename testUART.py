@@ -10,12 +10,12 @@ import serial,time
 if __name__ == '__main__':
     
     print('Running. Press CTRL-C to exit.')
-    with serial.Serial("/dev/ttyAMA0", 115200, timeout=1) as stm32:
+    with serial.Serial("/dev/serial0", 115200, timeout=1) as stm32:
         time.sleep(2) #wait for serial to open
         if stm32.isOpen():
             print("{} connected!".format(stm32.port))
             stm32.write("HELL".encode('utf-8'))
-    with serial.Serial("/dev/ttyS0", 115200, timeout=1) as stm322:
+    with serial.Serial("/dev/serial1", 115200, timeout=1) as stm322:
         time.sleep(2) #wait for serial to open
         if stm322.isOpen():
             print("{} connected!".format(stm322.port))
