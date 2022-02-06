@@ -15,14 +15,14 @@ if __name__ == '__main__':
         if stm32.isOpen():
             print("{} connected!".format(stm32.port))
             stm32.write("W".encode('utf-8'))
-     with serial.Serial("/dev/ttys0", 115200, timeout=1) as stm32:
+    with serial.Serial("/dev/ttys0", 115200, timeout=1) as stm322:
         time.sleep(2) #wait for serial to open
-        if stm32.isOpen():
-            print("{} connected!".format(stm32.port))
-            stm32.write("W".encode('utf-8'))
-     with serial.Serial("/dev/ttyS0", 115200, timeout=1) as stm32:
+        if stm322.isOpen():
+            print("{} connected!".format(stm322.port))
+            stm322.write("W".encode('utf-8'))
+    with serial.Serial("/dev/ttyS0", 115200, timeout=1) as stm323:
         time.sleep(2) #wait for serial to open
-        if stm32.isOpen():
-            print("{} connected!".format(stm32.port))
-            stm32.write("W".encode('utf-8'))
+        if stm323.isOpen():
+            print("{} connected!".format(stm323.port))
+            stm323.write("W".encode('utf-8'))
            
