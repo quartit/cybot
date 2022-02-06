@@ -1,20 +1,14 @@
 #!/usr/bin/env python
 
-# -*- coding: utf-8 -*-
-# lsusb to check device name
-#dmesg | grep "tty" to find port name
+import time
+import serial
 
-import serial,time
+ser = serial.Serial('/dev/ttyS0', 115200, timeout=0.050)
+count = 0
 
-
-if __name__ == '__main__':
-    
-    print('Running. Press CTRL-C to exit.')
-    with serial.Serial("/dev/ttyS0", 115200, timeout=1) as stm32:
-        time.sleep(2) #wait for serial to open
-        if stm32.isOpen():
-            print("{} connected!".format(stm32.port))
-            stm32.write("HELLO".encode())
-           
+while 1:
+    ser.write('Sent %d time(s)')
+    time.sleep(1)
+    count += 1                        
           
    
