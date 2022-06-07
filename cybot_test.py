@@ -8,10 +8,10 @@ def talker():
     rospy.init_node('serial_node', anonymous=True)
     rate = rospy.Rate(10) # 10hz
     #while not rospy.is_shutdown():
-        hello_str = "MOVE<E0>800</E0>" 
-        rospy.loginfo(hello_str)
-        pub.publish(hello_str)
-        rate.sleep()
+    hello_str = "MOVE<E0>800</E0>" 
+    rospy.loginfo(hello_str)
+    pub.publish(hello_str)
+    rate.sleep()
 
 if __name__ == '__main__':
     try:
