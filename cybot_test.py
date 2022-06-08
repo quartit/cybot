@@ -8,7 +8,7 @@ def talker():
     pub = rospy.Publisher('/cybot_btt_cmd', String, queue_size=10)
     rospy.init_node('serial_node', anonymous=True)
     rate = rospy.Rate(10) # 10hz 
-    hello_str = "MOVE<X>2000</X>" 
+    hello_str = "MOVE<X>20000</X>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
