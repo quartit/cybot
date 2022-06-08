@@ -8,6 +8,7 @@ timeSleep = 1
 def talker():
     pub = rospy.Publisher('/cybot_btt_cmd', String, queue_size=10)
     rospy.init_node('serial_node', anonymous=True)
+    time.sleep(timeSleep)
     rate = rospy.Rate(10) # 10hz 
     hello_str = "MOVE<X>20000</X>" 
     rospy.loginfo(hello_str)
