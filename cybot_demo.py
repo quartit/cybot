@@ -25,12 +25,12 @@ def talker():
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(timeSleep)
-    hello_str = "MOVE<X>-20000</X><Z>20000</Z><E0>20000</E0><Y>-5000</Y>" 
+    hello_str = "MOVE<E1>-20000</E1><X>-20000</X><Z>20000</Z><E0>20000</E0><Y>-5000</Y>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(timeSleep)
-    hello_str = "MOVE<E0>-20000</E0><Y>5000</Y>" 
+    hello_str = "MOVE<E1>20000</E1><E0>-20000</E0><Y>5000</Y>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
