@@ -35,7 +35,7 @@ def talker():
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(timeSleep)
-    hello_str = "MOVE<E2>-5000</E2><E0>-20000</E0>" 
+    hello_str = "MOVE<E2>5000</E2><E0>-20000</E0>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
