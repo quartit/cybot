@@ -4,7 +4,7 @@ import rospy
 import time
 from std_msgs.msg import String
 
-timeSleep = 8
+timeSleep = 1
 def talker():
     pub = rospy.Publisher('/cybot_btt_cmd', String, queue_size=10)
     rospy.init_node('serial_node', anonymous=True)
