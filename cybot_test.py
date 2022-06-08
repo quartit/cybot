@@ -9,12 +9,14 @@ def talker():
     rospy.init_node('serial_node', anonymous=True)
     rate = rospy.Rate(10) # 10hz
     #while not rospy.is_shutdown():
-    hello_str = "MOVE<E2>-4000</E2><E0>15000</E0><E1>-15000</E1>" 
+    #hello_str = "MOVE<E2>-4000</E2><E0>15000</E0><E1>-15000</E1>" 
+    hello_str = "MOVE<X>-4000</X>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(2)
-    hello_str = "MOVE<E2>4000</E2><E0>-15000</E0><E1>15000</E1>" 
+    #hello_str = "MOVE<E2>4000</E2><E0>-15000</E0><E1>15000</E1>" 
+    hello_str = "MOVE<X>4000</X>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
