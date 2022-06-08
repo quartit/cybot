@@ -4,6 +4,7 @@ import rospy
 import time
 from std_msgs.msg import String
 
+timeSleep = 8
 def talker():
     pub = rospy.Publisher('/cybot_btt_cmd', String, queue_size=10)
     rospy.init_node('serial_node', anonymous=True)
@@ -12,37 +13,37 @@ def talker():
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<X>-20000</X>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<Y>20000</Y>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<Y>-20000</Y>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<Z>5000</Z>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<Z>-5000</Z>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<E0>10000</E0>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<E0>-10000</E0>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
@@ -52,22 +53,22 @@ def talker():
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<E1>-10000</E1>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<E2>5000</E2>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
     hello_str = "MOVE<E2>-5000</E2>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
-    time.sleep(8)
+    time.sleep(timeSleep)
 
 if __name__ == '__main__':
     try:
