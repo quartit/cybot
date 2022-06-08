@@ -13,57 +13,57 @@ def talker():
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<X>-2000</X>" 
+    hello_str = "MOVE<X>-20000</X>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<Y>2000</Y>" 
+    hello_str = "MOVE<Y>20000</Y>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<Y>-2000</Y>" 
+    hello_str = "MOVE<Y>-5000</Y>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<Z>2000</Z>" 
+    hello_str = "MOVE<Z>5000</Z>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<Z>-2000</Z>" 
+    hello_str = "MOVE<Z>-5000</Z>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<E0>2000</E0>" 
+    hello_str = "MOVE<E0>10000</E0>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<E0>-2000</E0>" 
+    hello_str = "MOVE<E0>-10000</E0>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<E1>2000</E1>" 
+    hello_str = "MOVE<E1>10000</E1>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<E1>-2000</E1>" 
+    hello_str = "MOVE<E1>-10000</E1>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<E2>2000</E2>" 
+    hello_str = "MOVE<E2>10000</E2>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
     time.sleep(4)
-    hello_str = "MOVE<E2>-2000</E2>" 
+    hello_str = "MOVE<E2>-10000</E2>" 
     rospy.loginfo(hello_str)
     pub.publish(hello_str)
     rate.sleep()
